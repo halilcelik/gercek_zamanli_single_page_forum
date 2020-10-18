@@ -29,7 +29,7 @@ class QuestionFactory extends Factory
         $title = $this->faker->sentence;
         return [
            'title' => $this->faker->title,
-           'slug' =>  Str::slug('title'),
+           'slug' =>  Str::slug($title),
            'body' => $this->faker->text,
            'category_id' => function() {
                return Category::all()->random();
